@@ -12,8 +12,10 @@ import rx.schedulers.Schedulers;
  */
 public class LoginInteractorImpl implements LoginInteractor {
     @Override
-    public void login(final String username, final String password, final OnLoginFinishedListener listener) {
-        FretebrasService service = ServiceFactory.createRetrofitService(FretebrasService.class, FretebrasService.SERVICE_ENDPOINT);
+    public void login(final String username, final String password,
+                      final OnLoginFinishedListener listener) {
+        FretebrasService service = ServiceFactory.createRetrofitService(
+                FretebrasService.class, FretebrasService.SERVICE_ENDPOINT);
         service.getLogin(username, password)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
