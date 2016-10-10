@@ -3,6 +3,7 @@ package br.com.fretebras.thalisson.account;
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+
 import br.com.fretebras.thalisson.R;
 import br.com.fretebras.thalisson.databinding.ActivityAccountBinding;
 import br.com.fretebras.thalisson.objects.User;
